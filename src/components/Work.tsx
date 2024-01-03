@@ -8,7 +8,7 @@ const Work = () => {
           <p className="text-4xl font-bold inline border-b-4 border-pink-600">
             Work
           </p>
-          <p className="py-6"> // Check out some of my recent work</p>
+          <p className="py-6"> //Check out some of my recent work</p>
         </div>
         <div className="gird sm: gird-cols-2 md: grid-cols-3 gap-4">
           <div className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div">
