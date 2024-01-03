@@ -7,7 +7,7 @@ import Work from "./components/Work";
 
 function App() {
   useEffect(() => {
-    document.title = "My App";
+    document.title = "Emmanuel's Portfolio";
   });
 
   return (
