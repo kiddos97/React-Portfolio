@@ -1,11 +1,13 @@
 import work from "../assets/workImg.jpeg";
 import realestate from "../assets/realestate.jpg";
 
+///For Tomorrow Clean up Work.tsx render the projects
+
 const Work = () => {
   return (
     <div
       name="work"
-      className="w-full h-full md:h-screen bg-[#0a192f] text-gray-300"
+      className="w-full p-4 md:h-screen bg-[#0a192f] text-gray-300"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="sm:text-center pb-8">

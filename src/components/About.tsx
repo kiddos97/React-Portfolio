@@ -1,3 +1,9 @@
+interface Person {
+  name: string;
+}
+const person: Person = {
+  name: "Emmanuel",
+};
 const About = () => {
   return (
     <div name="about" className="w-full h-screen bg-[#0a192f] text-gray-300">
@@ -13,7 +19,8 @@ const About = () => {
         <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
           <div className="sm: text-left text-4xl font-bold">
             <p>
-              Hi. I'm Emmanuel, nice to meet you. Please take a look around.
+              Hi. I'm {person.name}, nice to meet you. Please take a look
+              around.
             </p>
           </div>
           <div>
