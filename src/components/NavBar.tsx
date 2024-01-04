@@ -20,27 +20,27 @@ const NavBar = () => {
       <div>
         <ul className="hidden md:flex">
           <li>
-            <Link smooth={true} to="home" containerId="containerElement">
+            <Link smooth={true} to="home" duration={500}>
               Home
             </Link>
           </li>
           <li>
-            <Link smooth={true} to="about" containerId="containerElement">
+            <Link smooth={true} to="about" duration={500}>
               About
             </Link>
           </li>
           <li>
-            <Link smooth={true} to="skills" containerId="containerElement">
+            <Link smooth={true} to="skills" duration={500}>
               Skills
             </Link>
           </li>
           <li>
-            <Link smooth={true} to="work" containerId="containerElement">
+            <Link smooth={true} to="work" duration={500}>
               Work
             </Link>
           </li>
           <li>
-            <Link smooth={true} to="contact" containerId="containerElement">
+            <Link smooth={true} to="contact" duration={500}>
               Contact
             </Link>
           </li>
@@ -59,10 +59,31 @@ const NavBar = () => {
             : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
         }
       >
-        <li className="py-6 text-4xl">Home</li>
-        <li className="py-6 text-4xl">About</li>
-        <li className="py-6 text-4xl">Skills</li>
-        <li className="py-6 text-4xl">Contact</li>
+        <li className="py-6 text-4xl">
+          <Link onClick={Navhandler} smooth={true} to="home" duration={500}>
+            Home
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link onClick={Navhandler} smooth={true} to="about" duration={500}>
+            About
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link onClick={Navhandler} smooth={true} to="skills" duration={500}>
+            Skills
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link onClick={Navhandler} smooth={true} to="work" duration={500}>
+            Work
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link onClick={Navhandler} smooth={true} to="contact" duration={500}>
+            Contact
+          </Link>
+        </li>
       </ul>
       {/*Social Icon */}
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
