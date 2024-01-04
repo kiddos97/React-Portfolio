@@ -9,7 +9,7 @@ const Contact = () => {
         action="https://getform.io/f/bab19575-7084-44e8-b510-5536a0cfc917"
         className="flex flex-col max-w-[600px] w-full"
       >
-        <div className="pb-8">
+        <div className="sm:text-center pb-8">
           <p className="text-4xl font-bold text-gray-300 inline border-b-4 border-pink-600">
             Contact
           </p>
@@ -35,7 +35,7 @@ const Contact = () => {
           rows={10}
           placeholder="Message"
         ></textarea>
-        <button className="text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center">
+        <button className="text-white rounded-lg border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center">
           Let's Connect
         </button>
       </form>
