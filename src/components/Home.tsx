@@ -1,6 +1,7 @@
 import { HiArrowNarrowRight } from "react-icons/hi";
 import Typed from "react-typed";
 import { Link } from "react-scroll";
+import { useState } from "react";
 interface Person {
   name: string;
 }
