@@ -1,6 +1,6 @@
 import { HiArrowNarrowRight } from "react-icons/hi";
 import Typed from "react-typed";
-
+import { Link } from "react-scroll";
 interface Person {
   name: string;
 }
@@ -9,6 +9,8 @@ const person: Person = {
   name: "Emmanuel Imarhiagbe",
 };
 const Home = () => {
+  const [nav, setNav] = useState(false);
+  const Navhandler = () => setNav(!nav); //handling nav bar
   return (
     <>
       <div name="home" className="w-full pt-40 h-full bg-[#0a192f]">
@@ -36,7 +38,9 @@ const Home = () => {
           </p>
           <div>
             <button className="text-white  rounded-lg border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600">
-              View Work
+              <Link onClick={Navhandler} smooth={true} to="home" duration={500}>
+                View Work
+              </Link>
               <span className="hover:rotate-90 duration-300">
                 <HiArrowNarrowRight className="ml-3" />
               </span>
