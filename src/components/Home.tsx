@@ -22,7 +22,7 @@ const Home = () => {
             I'm a
             <Typed
               className="text-4xl sm:text-7xl font-bold text-[#8892b0] pl-2"
-              strings={["Full-Stack Developer.", "YouTuber.", "Creator."]}
+              strings={["Full-Stack Developer.", "YouTuber.", "Teacher."]}
               typeSpeed={120}
               backSpeed={140}
               loop
