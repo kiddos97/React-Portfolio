@@ -21,8 +21,12 @@ const Contact = ({ onSubmit }: Props) => {
   } = useForm<ContactFormData>({ resolver: zodResolver(schema) });
 
   const handleFormSubmit = async (data: ContactFormData) => {
-    onSubmit(data);
-    reset();
+    try {
+      await onSubmit(data);
+      reset();
+    } catch (err) {
+      console.error("Form submission error: ", err);
+    }
   };
   return (
     <div
