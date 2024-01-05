@@ -46,7 +46,7 @@ const Work = () => {
           <p className="py-6">Check out some of my recent work</p>
         </div>
 
-        <div className="grid grid-cols-1 duration-500 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+        <div className="grid grid-cols-1 duration-500 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
           {projects.map((project, index) => (
             <div key={index} className="hover:scale-110 duration-500">
               <Project {...project} />
