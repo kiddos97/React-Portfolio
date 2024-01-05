@@ -39,7 +39,7 @@ const Home = () => {
           </p>
           <div>
             <button className="text-white  rounded-lg border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600">
-              <Link onClick={Navhandler} smooth={true} to="home" duration={500}>
+              <Link onClick={Navhandler} smooth={true} to="work" duration={500}>
                 View Work
               </Link>
               <span className="hover:rotate-90 duration-300">

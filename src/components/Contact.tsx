@@ -19,12 +19,18 @@ const Contact = ({ onSubmit }: Props) => {
     reset,
     formState: { errors },
   } = useForm<ContactFormData>({ resolver: zodResolver(schema) });
+
+  const handleFormSubmit = (data: ContactFormData) => {
+    onSubmit(data);
+    reset();
+  };
   return (
     <div
       name="contact"
       className="w-full h-screen bg-[#0a192f] flex justify-center items-center p-4"
     >
       <form
+        onSubmit={handleSubmit(handleFormSubmit)}
         method="POST"
         action="https://getform.io/f/bab19575-7084-44e8-b510-5536a0cfc917"
         className="flex flex-col max-w-[600px] w-full"
@@ -66,10 +72,7 @@ const Contact = ({ onSubmit }: Props) => {
           <p className="text-gray-300">{errors.message.message}</p>
         )}
         <button
-          onSubmit={handleSubmit((data) => {
-            onSubmit(data);
-            reset();
-          })}
+          type="submit"
           className="text-white rounded-lg border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center"
         >
           Let's Connect
