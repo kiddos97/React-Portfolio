@@ -22,7 +22,7 @@ const Contact = ({ onSubmit }: Props) => {
 
   const handleFormSubmit = async (data: ContactFormData) => {
     try {
-      await onSubmit(data);
+      onSubmit(data);
       reset();
     } catch (err) {
       console.error("Form submission error: ", err);
