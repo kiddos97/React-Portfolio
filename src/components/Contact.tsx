@@ -20,7 +20,7 @@ const Contact = ({ onSubmit }: Props) => {
     formState: { errors },
   } = useForm<ContactFormData>({ resolver: zodResolver(schema) });
 
-  const handleFormSubmit = (data: ContactFormData) => {
+  const handleFormSubmit = async (data: ContactFormData) => {
     onSubmit(data);
     reset();
   };
