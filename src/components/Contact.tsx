@@ -1,4 +1,24 @@
-const Contact = () => {
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+const schema = z.object({
+  name: z.string().min(3, { message: "Please enter a name!" }).max(100),
+  email: z.string().min(3, { message: "Please enter a email!" }).max(100),
+  message: z.string().min(3, { message: "Please enter a message!" }).max(100),
+});
+
+type ContactFormData = z.infer<typeof schema>;
+interface Props {
+  onSubmit: (data: ContactFormData) => void;
+}
+
+const Contact = ({ onSubmit }: Props) => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormData>({ resolver: zodResolver(schema) });
   return (
     <div
       name="contact"
@@ -18,24 +38,40 @@ const Contact = () => {
           </p>
         </div>
         <input
+          {...register("name")}
           className="bg-[#ccd6f6] p-2"
           type="text"
           placeholder="Name"
           name="name"
         />
+        {errors.name && <p className="text-gray-300">{errors.name.message}</p>}
         <input
+          {...register("email")}
           className="my-4 p-2 bg-[#ccd6f6]"
           type="email"
           placeholder="Email"
           name="email"
         />
+        {errors.email && (
+          <p className="text-gray-300">{errors.email.message}</p>
+        )}
         <textarea
+          {...register("message")}
           className="bg-[#ccd6f6] text-black-300 p-2"
           name="message"
           rows={10}
           placeholder="Message"
         ></textarea>
-        <button className="text-white rounded-lg border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center">
+        {errors.message && (
+          <p className="text-gray-300">{errors.message.message}</p>
+        )}
+        <button
+          onSubmit={handleSubmit((data) => {
+            onSubmit(data);
+            reset();
+          })}
+          className="text-white rounded-lg border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center"
+        >
           Let's Connect
         </button>
       </form>
