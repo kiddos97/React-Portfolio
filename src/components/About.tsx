@@ -24,12 +24,12 @@ const About = () => {
             </p>
           </div>
           <div>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis,
-            quos delectus. Odit, corporis impedit eligendi adipisci nesciunt sit
-            voluptate accusamus? Modi delectus, facere accusantium tempora
-            consequuntur, quos ad optio minima provident architecto, nihil
-            adipisci quis fugit vitae excepturi iusto omnis praesentium ab
-            maxime repellat animi quasi. Earum amet esse rerum?
+            I am 25-year-old software developer currently at General Motors with
+            over <strong className="text-lg">2+ Years</strong> experiences. With
+            a keen mind for innovation and a passion for crafting cutting-edge
+            solutions, I previously worked on SAS DMP project and now currently
+            work on the DMP Merkle project, and on the side I do Front-End web
+            development.
           </div>
         </div>
       </div>

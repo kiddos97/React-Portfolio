@@ -29,9 +29,10 @@ const Home = () => {
             />
           </h2>
           <p className="text-[#8892b0] py-4 max-w-[700px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut tenetur
-            error a, nam voluptatibus incidunt animi labore illum accusantium
-            doloribus?
+            My passion to create digital magic. With{" "}
+            <strong className="text-lg"> 2+ Years</strong> of Front-End
+            experience, I hope you'll witness the culmination of my dedication,
+            skills, and love for web development.
           </p>
           <div>
             <button className="text-white  rounded-lg border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600">
