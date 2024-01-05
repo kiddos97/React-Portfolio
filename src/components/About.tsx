@@ -19,14 +19,14 @@ const About = () => {
         <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
           <div
             className="sm: text-left text-4xl font-bold"
-            data-aos="fade-right"
+            data-aos="flip-right"
           >
             <p>
               Hi. I'm {person.name}, nice to meet you. Please take a look
               around.
             </p>
           </div>
-          <div>
+          <div data-aos="flip-left">
             I am 25-year-old software developer currently at General Motors with
             over <strong className="text-lg">2+ Years</strong> experiences. With
             a keen mind for innovation and a passion for crafting cutting-edge
