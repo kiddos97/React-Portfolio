@@ -9,8 +9,18 @@ import Contact from "./components/Contact";
 function App() {
   const [isform, setisForm] = useState("");
   useEffect(() => {
-    document.title = "Emmanuel's Portfolio";
-  });
+    document.title = "Portfolio";
+
+    const link = document.createElement("link");
+    link.rel = "icon";
+    link.href = "/Favicon/favicon.ico";
+
+    document.head.appendChild(link);
+
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
 
   return (
     <div>
