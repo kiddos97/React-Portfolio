@@ -9,7 +9,7 @@ import Contact from "./components/Contact";
 function App() {
   const [isform, setisForm] = useState("");
   useEffect(() => {
-    //document.title = "Portfolio";
+    document.title = "Portfolio";
 
     const link = document.createElement("link");
     link.rel = "icon";
