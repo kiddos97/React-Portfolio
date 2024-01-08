@@ -14,7 +14,6 @@ const About = () => {
               About
             </p>
           </div>
-          <div></div>
         </div>
         <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
           <div
@@ -26,11 +25,10 @@ const About = () => {
               around.
             </p>
           </div>
-          <div className="text-lg font-bold" data-aos="flip-left">
-            I am 25-year-old software developer based in Austin, Tx. Currently I
-            work at General Motors with over
-            <strong className="text-lg"> 2+ Years </strong> experiences. With a
-            keen mind for innovation and a passion for crafting cutting-edge
+          <div data-aos="flip-left">
+            I am 25-year-old software developer currently at General Motors with
+            over <strong className="text-lg">2+ Years</strong> experiences. With
+            a keen mind for innovation and a passion for crafting cutting-edge
             solutions, I previously worked on SAS DMP project and now currently
             work on the DMP Merkle project, and on the side I do Front-End web
             development.

@@ -15,6 +15,7 @@ const NavBar = () => {
         {/* Image */}
         <img src={Logo} alt="Logo image" style={{ width: "120px" }} />
       </div>
+
       {/*Menu */}
       <div>
         <ul className="hidden md:flex">
