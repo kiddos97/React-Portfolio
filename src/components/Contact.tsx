@@ -20,8 +20,12 @@ const Contact = ({ onSubmit }: Props) => {
     formState: { errors },
   } = useForm<ContactFormData>({ resolver: zodResolver(schema) });
 
-  const handleFormSubmit = async (data: ContactFormData) => {
+  const handleFormSubmit = async (
+    data: ContactFormData,
+    e: React.FormEvent<HTMLButtonElement>
+  ) => {
     try {
+      e.preventDefault();
       onSubmit(data);
       reset();
     } catch (err) {
@@ -34,7 +38,7 @@ const Contact = ({ onSubmit }: Props) => {
       className="w-full h-screen bg-[#0a192f] flex justify-center items-center p-4"
     >
       <form
-        onSubmit={handleSubmit(handleFormSubmit)}
+        onSubmit={(e) => handleSubmit((data) => handleFormSubmit(data, e))}
         method="POST"
         action="https://getform.io/f/bab19575-7084-44e8-b510-5536a0cfc917"
         className="flex flex-col max-w-[600px] w-full"
@@ -43,7 +47,7 @@ const Contact = ({ onSubmit }: Props) => {
           <p className="text-4xl font-bold text-gray-300 inline border-b-4 border-pink-600">
             Contact
           </p>
-          <p className=" text-gray-300 py-4">
+          <p className=" text-gray-300 py-4 font-bold">
             Submit the form below or shoot me an email
           </p>
         </div>
